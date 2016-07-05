@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VeganWebStore.Server.Logic;
 using VeganWebStore.Server.Service.Domain.Menu;
 
 namespace VeganWebStore.Server.Service{
@@ -12,6 +13,9 @@ namespace VeganWebStore.Server.Service{
 
         Application() {
             this.menu = new Menu();
+
+            DefaultStoreService storeService = new DefaultStoreService();
+
         }
 
         void initializeMenu() {

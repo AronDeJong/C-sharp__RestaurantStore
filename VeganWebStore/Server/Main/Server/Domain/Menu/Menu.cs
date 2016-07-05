@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VeganWebStore.Server.Service.Domain.Menu {
 
-    class Menu {
+    public class Menu {
         private List<MenuItem> menuItems;
 
         public Menu() {
@@ -31,7 +31,7 @@ namespace VeganWebStore.Server.Service.Domain.Menu {
 
     }
 
-    internal class MenuItem {
+    public class MenuItem {
         readonly String name;
         readonly String description;
         readonly Decimal price;
@@ -62,7 +62,7 @@ namespace VeganWebStore.Server.Service.Domain.Menu {
             get{ return price; }
         }
 
-        internal class MenuItemBuilder {
+        public class MenuItemBuilder {
             String name;
             String description;
             Decimal price;

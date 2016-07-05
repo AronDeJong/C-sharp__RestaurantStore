@@ -11,6 +11,7 @@
     <AssemblyName>VeganWebStore</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,6 +48,14 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,20 +66,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Server\Src\Main\Server\Application.cs" />
-    <Compile Include="Server\Src\Main\Server\Domain\Menu\Menu.cs" />
-    <Compile Include="Server\Src\Main\Server\Logic\StoreService.cs" />
-    <Compile Include="Server\Src\Main\Server\Logic\DefaultStoreService.cs" />
-    <Compile Include="Server\Src\Test\Server\Logic\StoreServiceTest.cs" />
+    <Compile Include="Server\Main\Server\Application.cs" />
+    <Compile Include="Server\Main\Server\Domain\Menu\Menu.cs" />
+    <Compile Include="Server\Main\Server\Logic\StoreService.cs" />
+    <Compile Include="Server\Main\Server\Logic\DefaultStoreService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Server\Src\Main\Config\" />
-    <Folder Include="Server\Src\Main\Server\Endpoint\Database\DAO\Menu\" />
-    <Folder Include="Server\Src\Main\Server\Endpoint\Database\DAO\Order\" />
-    <Folder Include="Server\Src\Main\Server\Endpoint\Rest\" />
-    <Folder Include="Server\Src\Test\Config\" />
+    <Folder Include="Server\Main\Config\" />
+    <Folder Include="Server\Main\Server\Endpoint\Database\DAO\Menu\" />
+    <Folder Include="Server\Main\Server\Endpoint\Database\DAO\Order\" />
+    <Folder Include="Server\Main\Server\Endpoint\Rest\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -84,6 +89,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

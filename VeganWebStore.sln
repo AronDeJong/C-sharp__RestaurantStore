@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeganWebStore", "VeganWebStore\VeganWebStore.csproj", "{EEBF4FAB-BC6C-430D-9DF1-72F938825FCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeganWebStoreUnitTest", "UnitTestProject1\VeganWebStoreUnitTest.csproj", "{52AF304F-ED57-493E-B9E4-16B6B435318E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EEBF4FAB-BC6C-430D-9DF1-72F938825FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEBF4FAB-BC6C-430D-9DF1-72F938825FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEBF4FAB-BC6C-430D-9DF1-72F938825FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52AF304F-ED57-493E-B9E4-16B6B435318E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52AF304F-ED57-493E-B9E4-16B6B435318E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52AF304F-ED57-493E-B9E4-16B6B435318E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52AF304F-ED57-493E-B9E4-16B6B435318E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using VeganWebStore.Server.Service.Domain.Menu;
-using VeganWebStore.Server.Src.Service.Logic;
+using VeganWebStore.Server.Logic;
 
-namespace VeganWebStore.Server.Service.Logic
-{
-    class DefaultStoreService: StoreService {
+namespace VeganWebStore.Server.Logic {
+
+    public class DefaultStoreService: StoreService {
         public Menu menu;
 
-
-        public void addMenuItems(List<MenuItem> menuItems) {
-            menuItems.ForEach(item => menu.addMenuItem(item));
+        public DefaultStoreService() {
+            menu = new Menu();
         }
 
+        public void addMenuItems(List<MenuItem> menuItems) {
+            menuItems.ForEach(menuItem => addMenuItem(menuItem));
+        }
 
         public List<MenuItem> getMenuItems() {
             return menu.getMenuItems();
@@ -22,8 +24,8 @@ namespace VeganWebStore.Server.Service.Logic
             return getMenuItems().Find(item => item.Name.Equals(name));
         }
 
-        public void addMenuItem(List<MenuItem> menuItems) {
-            throw new NotImplementedException();
+        public void addMenuItem(MenuItem menuItem) {
+            menu.addMenuItem(menuItem);
         }
     }
 }
