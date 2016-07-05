@@ -11,6 +11,21 @@
     <AssemblyName>VeganWebStore</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,15 +60,30 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Server\Service\Application.cs" />
-    <Compile Include="Server\Service\Domain\Menu\Menu.cs" />
-    <Compile Include="Server\Service\Logic\StoreService.cs" />
+    <Compile Include="Server\Src\Main\Server\Application.cs" />
+    <Compile Include="Server\Src\Main\Server\Domain\Menu\Menu.cs" />
+    <Compile Include="Server\Src\Main\Server\Logic\StoreService.cs" />
+    <Compile Include="Server\Src\Main\Server\Logic\DefaultStoreService.cs" />
+    <Compile Include="Server\Src\Test\Server\Logic\StoreServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Server\Config\" />
-    <Folder Include="Server\Service\Endpoint\Database\DAO\Menu\" />
-    <Folder Include="Server\Service\Endpoint\Database\DAO\Order\" />
-    <Folder Include="Server\Service\Endpoint\Rest\" />
+    <Folder Include="Server\Src\Main\Config\" />
+    <Folder Include="Server\Src\Main\Server\Endpoint\Database\DAO\Menu\" />
+    <Folder Include="Server\Src\Main\Server\Endpoint\Database\DAO\Order\" />
+    <Folder Include="Server\Src\Main\Server\Endpoint\Rest\" />
+    <Folder Include="Server\Src\Test\Config\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
