@@ -20,7 +20,7 @@ namespace VeganWebStore.Server.Service{
 
         void initializeMenu() {
             var menuItem = MenuItem.MenuItemBuilder.builder()
-                .setName("Vegan Duck")
+                .setTitle("Vegan Duck")
                 .setDescription("Vegan Duck with delicious sauce")
                 .setPrice(2.1m)
                 .build();

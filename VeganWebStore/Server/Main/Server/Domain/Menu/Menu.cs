@@ -24,34 +24,34 @@ namespace VeganWebStore.Server.Service.Domain.Menu {
             return menuItems;
         }
 
-        public MenuItem getMenuItemOnName(String name) {
-            return menuItems.Find(item => item.Name.Equals(name));
+        public MenuItem getMenuItemOnTitle(String title) {
+            return menuItems.Find(item => item.Name.Equals(title));
         }
 
 
     }
 
     public class MenuItem {
-        readonly String name;
+        readonly String title;
         readonly String description;
         readonly Decimal price;
 
         internal void print() {
             Console.WriteLine(
                 "Name: {0} | Description: {1} | Price: {2}", 
-                name, description, price);
+                title, description, price);
         }
 
 
 
         private MenuItem(MenuItemBuilder builder) {
-            this.name = builder.getName();
+            this.title = builder.getTitle();
             this.description = builder.getDescription();
             this.price = builder.getPrice();
         }
 
         public string Name {
-            get{ return name;}
+            get{ return title;}
         }
 
         public string Description {
@@ -63,7 +63,7 @@ namespace VeganWebStore.Server.Service.Domain.Menu {
         }
 
         public class MenuItemBuilder {
-            String name;
+            String title;
             String description;
             Decimal price;
 
@@ -75,8 +75,8 @@ namespace VeganWebStore.Server.Service.Domain.Menu {
                 return new MenuItem(this);
             }
 
-            public MenuItemBuilder setName(String name) {
-                this.name = name; return this;
+            public MenuItemBuilder setTitle(String title) {
+                this.title = title; return this;
             }
 
             public MenuItemBuilder setDescription(String description) {
@@ -87,7 +87,7 @@ namespace VeganWebStore.Server.Service.Domain.Menu {
                 this.price = price; return this;
             }
 
-            public String getName() {        return name; }
+            public String getTitle() {        return title; }
             public String getDescription() { return description; }
             public decimal getPrice() {      return price; }
         }

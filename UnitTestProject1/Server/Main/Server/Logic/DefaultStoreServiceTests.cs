@@ -23,7 +23,7 @@ namespace VeganWebStore.Server.Logic.Tests {
 
             menuItemList.Add(
                 MenuItem.MenuItemBuilder.builder()
-                .setName(name)
+                .setTitle(name)
                 .setDescription(description)
                 .setPrice(2.1m)
                 .build()
